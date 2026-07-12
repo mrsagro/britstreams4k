@@ -11,14 +11,14 @@ export default function Pricing() {
     {
       id: "1-month",
       name: "1 Month",
-      price: "12",
+      price: "11.99",
       popular: false,
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "Standard Support"]
     },
     {
       id: "3-months",
       name: "3 Months",
-      price: "30",
+      price: "29.99",
       popular: false,
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "Standard Support"]
     },
