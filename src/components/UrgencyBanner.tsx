@@ -3,41 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function UrgencyBanner() {
-  const [timeLeft, setTimeLeft] = useState(7200); // 2 hours
-
-  useEffect(() => {
-    // Check if we have a saved end time in localStorage to keep countdown consistent across reloads
-    const savedEndTime = localStorage.getItem('saleEndTime');
-    if (savedEndTime) {
-      const remaining = Math.floor((parseInt(savedEndTime) - Date.now()) / 1000);
-      if (remaining > 0) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setTimeLeft(remaining);
-      } else {
-        // Reset timer if expired
-        const newEndTime = Date.now() + 7200 * 1000;
-        localStorage.setItem('saleEndTime', newEndTime.toString());
-        setTimeLeft(7200);
-      }
-    } else {
-      const newEndTime = Date.now() + 7200 * 1000;
-      localStorage.setItem('saleEndTime', newEndTime.toString());
-    }
-
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatTime = (seconds: number) => {
-    const h = Math.floor(seconds / 3600);
-    const m = Math.floor((seconds % 3600) / 60);
-    const s = seconds % 60;
-    return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-  };
-
-  // Avoid hydration mismatch by not rendering the timer on the server
+  // Avoid hydration mismatch
   const [mounted, setMounted] = useState(false);
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
@@ -72,7 +38,7 @@ export default function UrgencyBanner() {
         letterSpacing: '1px',
         border: '1px solid rgba(255,255,255,0.2)'
       }}>
-        {mounted ? formatTime(timeLeft) : "02:00:00"}
+        {mounted ? "ENDS MIDNIGHT!" : "ENDS MIDNIGHT!"}
       </span>
     </div>
   );

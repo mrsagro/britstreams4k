@@ -10,9 +10,7 @@ export default function CookieBanner() {
     // Check if user has already accepted cookies
     const consent = localStorage.getItem("britstream_cookie_consent");
     if (!consent) {
-      // Delay showing banner slightly for better UX
-      const timer = setTimeout(() => setShow(true), 1500);
-      return () => clearTimeout(timer);
+      setShow(true);
     }
   }, []);
 

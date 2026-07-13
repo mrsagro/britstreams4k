@@ -9,12 +9,8 @@ export default function FloatingWhatsApp() {
   const [isVisible, setIsVisible] = useState(false);
   const whatsappNumber = siteConfig.contact.whatsappNumber; // The user's provided number
 
-  // Add a slight delay before showing the button so it slides in
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 1500);
-    return () => clearTimeout(timer);
+    setIsVisible(true);
   }, []);
 
   const handleClick = () => {

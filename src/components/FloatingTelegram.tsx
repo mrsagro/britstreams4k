@@ -7,12 +7,8 @@ export default function FloatingTelegram() {
   const [isVisible, setIsVisible] = useState(false);
   const telegramHandle = "Iptvuk10";
 
-  // Add a slight delay before showing the button so it slides in
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 1500);
-    return () => clearTimeout(timer);
+    setIsVisible(true);
   }, []);
 
   const handleClick = () => {
