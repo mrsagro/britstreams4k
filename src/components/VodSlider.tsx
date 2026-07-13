@@ -1,6 +1,7 @@
 "use client";
 
 import { Play } from "lucide-react";
+import Image from "next/image";
 
 export default function VodSlider() {
   // Using locally hosted cinematic images to ensure they never expire
@@ -59,11 +60,13 @@ export default function VodSlider() {
             border: '1px solid rgba(255,255,255,0.05)',
             boxShadow: '0 10px 20px rgba(0,0,0,0.5)'
           }}>
-            {/* Standard img tag to avoid Next.js domain config errors */}
-            <img 
+            {/* Optimized Next.js Image */}
+            <Image 
               src={movie.image} 
               alt={movie.title}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              fill
+              sizes="(max-width: 768px) 200px, 200px"
+              style={{ objectFit: 'cover' }}
             />
             
             {/* Gradient Overlay for Text */}

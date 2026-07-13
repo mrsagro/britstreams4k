@@ -48,6 +48,7 @@ export default function Showcase() {
               src="/tv-showcase.png" 
               alt="4K Football Broadcast"
               fill
+              sizes="(max-width: 1000px) 100vw, 1000px"
               style={{
                 objectFit: 'cover'
               }}
