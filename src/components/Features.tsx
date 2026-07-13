@@ -42,7 +42,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="section" style={{ background: 'var(--background)', position: 'relative' }}>
+    <section id="features" className="section" style={{ background: '#050505', position: 'relative' }}>
       
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         
@@ -62,8 +62,8 @@ export default function Features() {
         }}>
           {features.map((feature, index) => (
             <div key={index} className="hover-card" style={{ 
-              background: '#ffffff',
-              border: '1px solid #e5e7eb',
+              background: 'linear-gradient(180deg, rgba(30,30,30,0.5) 0%, rgba(15,15,15,0.8) 100%)',
+              border: '1px solid rgba(255,255,255,0.05)',
               borderRadius: '1.5rem',
               padding: '2rem',
               display: 'flex',
@@ -71,8 +71,7 @@ export default function Features() {
               gap: '1.5rem',
               cursor: 'default',
               position: 'relative',
-              overflow: 'hidden',
-              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
+              overflow: 'hidden'
             }}>
               {/* Background ambient glow for icon */}
               <div style={{
@@ -92,8 +91,8 @@ export default function Features() {
               <div style={{ 
                 position: 'relative',
                 zIndex: 1,
-                background: '#f9fafb',
-                border: '1px solid #f3f4f6',
+                background: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
                 width: '64px',
                 height: '64px',
                 minWidth: '64px',
@@ -107,8 +106,8 @@ export default function Features() {
               </div>
               
               <div style={{ position: 'relative', zIndex: 1, paddingTop: '0.25rem' }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#111827', marginBottom: '0.5rem' }}>{feature.title}</h3>
-                <p style={{ color: '#4b5563', fontSize: '0.95rem', lineHeight: 1.6 }}>{feature.description}</p>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>{feature.title}</h3>
+                <p style={{ color: '#a1a1aa', fontSize: '0.95rem', lineHeight: 1.6 }}>{feature.description}</p>
               </div>
             </div>
           ))}

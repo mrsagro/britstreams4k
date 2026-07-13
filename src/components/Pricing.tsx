@@ -67,11 +67,11 @@ export default function Pricing() {
               padding: '3rem 2rem',
               display: 'flex',
               flexDirection: 'column',
-              border: plan.popular ? '2px solid var(--primary)' : '1px solid var(--glass-border)',
-              boxShadow: plan.popular ? '0 0 40px -10px rgba(236, 72, 153, 0.3)' : '0 4px 20px rgba(0,0,0,0.05)',
+              border: plan.popular ? '1px solid var(--primary)' : '1px solid var(--glass-border)',
+              boxShadow: plan.popular ? '0 0 40px -10px rgba(0, 68, 255, 0.4)' : 'none',
               transform: 'scale(1)',
               zIndex: plan.popular ? 10 : 1,
-              background: plan.popular ? 'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%)' : 'var(--card-bg)'
+              background: plan.popular ? 'linear-gradient(180deg, rgba(20,20,20,0.9) 0%, rgba(10,10,10,1) 100%)' : 'var(--glass-bg)'
             }}>
               
               {plan.badge && (

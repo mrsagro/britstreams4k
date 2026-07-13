@@ -49,47 +49,44 @@ export default function ChannelSearch() {
           padding: '1rem'
         }}>
           <div className="animate-fade-in" style={{
-            background: '#ffffff',
+            background: 'linear-gradient(180deg, rgba(20,20,20,1) 0%, rgba(10,10,10,1) 100%)',
+            border: '1px solid rgba(255,255,255,0.1)',
+            borderRadius: '1.5rem',
             width: '100%',
-            maxWidth: '500px',
-            borderRadius: '1rem',
-            padding: '1.5rem',
-            position: 'relative',
-            border: '1px solid #e5e7eb',
-            color: '#111827',
+            maxWidth: '600px',
             maxHeight: '80vh',
             display: 'flex',
             flexDirection: 'column',
-            boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1)'
+            boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)'
           }}>
             
             {/* Header & Search Input */}
-            <div style={{ paddingBottom: '1.5rem' }}>
+            <div style={{ padding: '2rem', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0 }}>Channel Search</h3>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 700, margin: 0 }}>Channel Search</h3>
                 <button 
                   onClick={() => setIsOpen(false)}
                   aria-label="Close search"
-                  style={{ background: 'transparent', border: 'none', color: '#6b7280', cursor: 'pointer' }}
+                  style={{ background: 'transparent', border: 'none', color: '#a1a1aa', cursor: 'pointer' }}
                 >
                   <X size={24} />
                 </button>
               </div>
 
               <div style={{ position: 'relative' }}>
-                <Search size={20} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: '#9ca3af' }} />
+                <Search size={20} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: '#71717a' }} />
                 <input 
                   type="text" 
-                  placeholder="Search for a channel (e.g., Sky Sports)" 
+                  placeholder="Search for Sky Sports, BBC..." 
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   style={{
                     width: '100%',
-                    padding: '0.75rem 1rem 0.75rem 3rem',
-                    background: '#f9fafb',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '0.5rem',
-                    color: '#111827',
+                    padding: '1rem 1rem 1rem 3rem',
+                    background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '0.75rem',
+                    color: '#fff',
                     fontSize: '1rem',
                     outline: 'none'
                   }}
@@ -98,7 +95,7 @@ export default function ChannelSearch() {
             </div>
 
             {/* Results Area */}
-            <div style={{ overflowY: 'auto', flexGrow: 1 }}>
+            <div style={{ padding: '2rem', overflowY: 'auto', flexGrow: 1 }}>
               {query.trim() === "" && (
                 <div style={{ marginBottom: '1.5rem', fontSize: '0.85rem', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 600 }}>
                   Showing Popular Channels (20,000+ Total Available)
