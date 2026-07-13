@@ -16,10 +16,7 @@ export default function Hero() {
   
   const [currentBg, setCurrentBg] = useState(0);
 
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setMounted(true);
     const interval = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % backgrounds.length);
     }, 5000); // Change image every 5 seconds
@@ -38,32 +35,27 @@ export default function Hero() {
       zIndex: 1
     }}>
       {/* Background Images with Fade Transition */}
-      {backgrounds.map((bg, index) => {
-        // Defer rendering of hidden background images until after initial mount to improve LCP
-        if (index > 0 && !mounted) return null;
-
-        return (
-          <div key={bg} style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            opacity: currentBg === index ? 1 : 0,
-            transition: 'opacity 1.5s ease-in-out',
-            zIndex: -2
-          }}>
-            <Image
-              src={bg}
-              alt={`Hero Background ${index + 1}`}
-              fill
-              priority={index === 0}
-              quality={index === 0 ? 80 : 60}
-              style={{ objectFit: 'cover', objectPosition: 'center' }}
-            />
-          </div>
-        );
-      })}
+      {backgrounds.map((bg, index) => (
+        <div key={bg} style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          opacity: currentBg === index ? 1 : 0,
+          transition: 'opacity 1.5s ease-in-out',
+          zIndex: -2
+        }}>
+          <Image
+            src={bg}
+            alt={`Hero Background ${index + 1}`}
+            fill
+            priority={index === 0}
+            quality={index === 0 ? 70 : 60}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+          />
+        </div>
+      ))}
 
       {/* Background Dark Overlay */}
       <div style={{
