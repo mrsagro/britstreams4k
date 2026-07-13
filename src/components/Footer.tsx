@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#050505', borderTop: '1px solid var(--glass-border)', padding: '4rem 0 2rem 0' }}>
+    <footer style={{ background: '#f9fafb', borderTop: '1px solid var(--glass-border)', padding: '4rem 0 2rem 0' }}>
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
           

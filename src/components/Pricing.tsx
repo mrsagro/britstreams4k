@@ -11,21 +11,21 @@ export default function Pricing() {
     {
       id: "1-month",
       name: "1 Month",
-      price: "11.99",
+      price: "14.99",
       popular: false,
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "Standard Support"]
     },
     {
       id: "3-months",
       name: "3 Months",
-      price: "29.99",
+      price: "34.99",
       popular: false,
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "Standard Support"]
     },
     {
       id: "6-months",
       name: "6 Months",
-      price: "54.99",
+      price: "59.99",
       popular: true,
       badge: "Most Popular",
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "Priority Support", "2 Connections"]
@@ -33,7 +33,7 @@ export default function Pricing() {
     {
       id: "12-months",
       name: "12 Months",
-      price: "84.99",
+      price: "89.99",
       popular: false,
       badge: "Best Value",
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "VIP 24/7 Support", "2 Connections", "Free VPN Included"]
@@ -67,11 +67,11 @@ export default function Pricing() {
               padding: '3rem 2rem',
               display: 'flex',
               flexDirection: 'column',
-              border: plan.popular ? '1px solid var(--primary)' : '1px solid var(--glass-border)',
-              boxShadow: plan.popular ? '0 0 40px -10px rgba(0, 68, 255, 0.4)' : 'none',
+              border: plan.popular ? '2px solid var(--primary)' : '1px solid var(--glass-border)',
+              boxShadow: plan.popular ? '0 0 40px -10px rgba(236, 72, 153, 0.3)' : '0 4px 20px rgba(0,0,0,0.05)',
               transform: 'scale(1)',
               zIndex: plan.popular ? 10 : 1,
-              background: plan.popular ? 'linear-gradient(180deg, rgba(20,20,20,0.9) 0%, rgba(10,10,10,1) 100%)' : 'var(--glass-bg)'
+              background: plan.popular ? 'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%)' : 'var(--card-bg)'
             }}>
               
               {plan.badge && (

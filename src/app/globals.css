@@ -1,21 +1,21 @@
 :root {
-  --background: #050505;
-  --foreground: #f4f4f5;
+  --background: #ffffff;
+  --foreground: #111827;
   
-  --primary: #0044ff; /* Electric Blue for UK trust */
-  --primary-hover: #0033cc;
+  --primary: #ec4899; /* Vibrant Pink */
+  --primary-hover: #db2777;
   
-  --accent: #ff1100; /* Red accent */
-  --accent-hover: #cc0e00;
+  --accent: #ef4444; /* Red accent */
+  --accent-hover: #dc2626;
 
   --success: #10b981;
   --warning: #f59e0b;
   
-  --card-bg: rgba(20, 20, 20, 0.6);
-  --card-border: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.08);
   
-  --glass-bg: rgba(10, 10, 10, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
   --glass-blur: 16px;
   
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

@@ -24,7 +24,7 @@ export default function Header() {
       zIndex: 50,
       padding: '1rem 0',
       transition: 'all 0.3s ease',
-      background: scrolled || mobileMenuOpen ? 'rgba(5, 5, 5, 0.95)' : 'transparent',
+      background: scrolled || mobileMenuOpen ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
       backdropFilter: scrolled || mobileMenuOpen ? 'blur(16px)' : 'none',
       borderBottom: scrolled || mobileMenuOpen ? '1px solid var(--glass-border)' : '1px solid transparent'
     }}>
@@ -44,11 +44,11 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="desktop-nav">
-          <Link href="/#channels" style={{ color: 'var(--muted)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Channels</Link>
-          <Link href="/setup" style={{ color: 'var(--muted)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Setup</Link>
-          <Link href="/reseller" style={{ color: 'var(--muted)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Reseller</Link>
-          <Link href="/blog" style={{ color: 'var(--muted)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Blog</Link>
-          <Link href="/#pricing" style={{ color: 'var(--muted)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted)'}>Pricing</Link>
+          <Link href="/#channels" style={{ color: 'var(--foreground)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'}>Channels</Link>
+          <Link href="/setup" style={{ color: 'var(--foreground)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'}>Setup</Link>
+          <Link href="/reseller" style={{ color: 'var(--foreground)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'}>Reseller</Link>
+          <Link href="/blog" style={{ color: 'var(--foreground)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'}>Blog</Link>
+          <Link href="/#pricing" style={{ color: 'var(--foreground)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--foreground)'}>Pricing</Link>
           
           <Link href="#pricing" className="btn btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.875rem' }}>
             Get Started
@@ -60,7 +60,7 @@ export default function Header() {
           className="show-on-mobile"
           aria-label="Toggle mobile menu"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.25rem' }}
+          style={{ background: 'transparent', border: 'none', color: 'var(--foreground)', cursor: 'pointer', padding: '0.25rem' }}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
