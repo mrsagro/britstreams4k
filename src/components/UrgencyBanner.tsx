@@ -11,6 +11,7 @@ export default function UrgencyBanner() {
     if (savedEndTime) {
       const remaining = Math.floor((parseInt(savedEndTime) - Date.now()) / 1000);
       if (remaining > 0) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setTimeLeft(remaining);
       } else {
         // Reset timer if expired
@@ -38,6 +39,7 @@ export default function UrgencyBanner() {
 
   // Avoid hydration mismatch by not rendering the timer on the server
   const [mounted, setMounted] = useState(false);
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
 
