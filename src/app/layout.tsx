@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 import CookieBanner from "@/components/CookieBanner";
 import Script from "next/script";
 
-const FloatingWhatsApp = dynamic(() => import("@/components/FloatingWhatsApp"), { ssr: false });
-const FloatingTelegram = dynamic(() => import("@/components/FloatingTelegram"), { ssr: false });
+const FloatingWhatsApp = dynamic(() => import("@/components/FloatingWhatsApp"));
+const FloatingTelegram = dynamic(() => import("@/components/FloatingTelegram"));
 
 const inter = Inter({ subsets: ["latin"] });
 
