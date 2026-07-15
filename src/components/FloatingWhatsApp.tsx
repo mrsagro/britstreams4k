@@ -30,7 +30,7 @@ export default function FloatingWhatsApp() {
       flexDirection: 'column',
       alignItems: 'flex-end',
       gap: '0.75rem'
-    }} className="animate-fade-in">
+    }}>
       
       {/* WhatsApp Button */}
       <a 

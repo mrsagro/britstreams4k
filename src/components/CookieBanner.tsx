@@ -22,7 +22,7 @@ export default function CookieBanner() {
   if (!show) return null;
 
   return (
-    <div className="animate-fade-in" style={{
+    <div style={{
       position: 'fixed',
       bottom: '1rem',
       left: '0.5rem',
@@ -30,8 +30,7 @@ export default function CookieBanner() {
       margin: '0 auto',
       zIndex: 9999,
       maxWidth: '700px',
-      background: 'rgba(20, 20, 20, 0.95)',
-      backdropFilter: 'blur(16px)',
+      background: 'rgba(20, 20, 20, 0.98)',
       border: '1px solid var(--glass-border)',
       borderRadius: '0.75rem',
       padding: '1rem',

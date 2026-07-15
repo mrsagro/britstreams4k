@@ -27,7 +27,7 @@ export default function FloatingTelegram() {
       flexDirection: 'column',
       alignItems: 'flex-end',
       gap: '0.75rem'
-    }} className="animate-fade-in">
+    }}>
       
       {/* Telegram Button */}
       <a 
