@@ -8,7 +8,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://britstreams4k.uk"),
+  metadataBase: new URL("https://www.britstreams4k.uk"),
   title: "BritStreams 4K | Best Premium UK IPTV Subscription Service 2026",
   description: "Experience the Ultimate UK Streaming with BritStreams 4K. Anti-freeze 3.0 technology, 20,000+ channels in HD/4K, and 50,000+ VODs. Compatible with all devices.",
   keywords: "IPTV UK, Premium IPTV, 4K IPTV subscription, BritStreams 4K, Firestick IPTV, UK Sports IPTV",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "BritStreams 4K - Premium UK IPTV",
     description: "The Ultimate UK Streaming Experience with 4K UHD and Anti-Freeze 3.0",
-    url: "https://britstreams4k.uk",
+    url: "https://www.britstreams4k.uk",
     siteName: "BritStreams 4K",
     locale: "en_GB",
     type: "website",

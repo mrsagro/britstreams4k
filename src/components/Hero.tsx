@@ -59,12 +59,26 @@ export default function Hero() {
 
           <h1 className="heading-xl" style={{ marginBottom: '1.5rem' }}>
             The Ultimate UK <br />
-            <span style={{ color: 'var(--primary)', WebkitTextFillColor: 'var(--primary)' }}>Streaming Experience.</span>
+            <span style={{ 
+              color: 'var(--primary)', 
+              WebkitTextFillColor: 'var(--primary)',
+              WebkitTextStroke: '1px #FFD700',
+              textShadow: '0 2px 10px rgba(0,0,0,0.8)'
+            }}>Streaming Experience.</span>
           </h1>
           
-          <p className="text-muted heading-md" style={{ fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem auto', lineHeight: 1.6 }}>
+          <p className="heading-md" style={{ 
+            color: '#ffffff', 
+            textShadow: '0 2px 15px rgba(0,0,0,0.9), 0 2px 5px rgba(0,0,0,0.8)',
+            fontSize: '1.25rem', 
+            fontWeight: 500,
+            marginBottom: '2.5rem', 
+            maxWidth: '600px', 
+            margin: '0 auto 2.5rem auto', 
+            lineHeight: 1.6 
+          }}>
             Access exclusive content from the UK, US, and worldwide in stunning 4K UHD. 
-            <span style={{ color: '#fff', fontWeight: 500 }}> No freezing, no buffering. Just premium entertainment.</span>
+            <span style={{ color: '#fff', fontWeight: 700 }}> No freezing, no buffering. Just premium entertainment.</span>
           </p>
           
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>

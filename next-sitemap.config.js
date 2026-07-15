@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://britstreams4k.uk',
-  generateRobotsTxt: true,
+  siteUrl: 'https://www.britstreams4k.uk',
+  generateRobotsTxt: false,
   generateIndexSitemap: false,
   robotsTxtOptions: {
     additionalPolicies: [

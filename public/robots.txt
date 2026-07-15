@@ -1,9 +1,15 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://britstreams4k.uk
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
 
-# Sitemaps
-Sitemap: https://britstreams4k.uk/sitemap.xml
+Sitemap: https://www.britstreams4k.uk/sitemap.xml
