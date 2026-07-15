@@ -11,21 +11,21 @@ export default function Pricing() {
     {
       id: "1-month",
       name: "1 Month",
-      price: "14.99",
+      price: "12.99",
       popular: false,
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "Standard Support"]
     },
     {
       id: "3-months",
       name: "3 Months",
-      price: "34.99",
+      price: "29.99",
       popular: false,
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "Standard Support"]
     },
     {
       id: "6-months",
       name: "6 Months",
-      price: "59.99",
+      price: "49.99",
       popular: true,
       badge: "Most Popular",
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "Priority Support", "2 Connections"]
@@ -33,7 +33,7 @@ export default function Pricing() {
     {
       id: "12-months",
       name: "12 Months",
-      price: "89.99",
+      price: "84.99",
       popular: false,
       badge: "Best Value",
       features: ["All UK & International Channels", "4K UHD Quality", "Anti-Freeze 3.0", "VOD & Series Library", "VIP 24/7 Support", "2 Connections", "Free VPN Included"]
