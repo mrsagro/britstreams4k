@@ -123,6 +123,15 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .heading-xl {
