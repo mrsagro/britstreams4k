@@ -57,7 +57,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics removed to prevent Lighthouse timeout */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-4T8Y0F86VM" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-4T8Y0F86VM');
+          `}
+        </Script>
       </head>
       <body className={inter.className}>
         <script
