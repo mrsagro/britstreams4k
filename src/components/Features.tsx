@@ -53,8 +53,8 @@ export default function Features() {
       
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px', lineHeight: 1.2 }}>
-            WHY THOUSANDS OF CUSTOMERS TRUST <span style={{ color: 'var(--primary)' }}>BRITSTREAMS4K</span>
+          <h2 style={{ fontSize: 'clamp(1.25rem, 4vw, 2rem)', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px', lineHeight: 1.2 }}>
+            WHY THOUSANDS OF CUSTOMERS TRUST <br className="show-on-mobile" /><span style={{ color: 'var(--primary)' }}>BRITSTREAMS4K</span>
           </h2>
           <p className="text-muted" style={{ fontSize: '1.25rem' }}>
             Everything a UK IPTV subscription should be, in one service.
