@@ -373,6 +373,7 @@ export default function DeviceAccordion() {
                       {guide.steps.map((step, stepIndex) => (
                         <div key={stepIndex} style={{ 
                           display: 'flex', 
+                          flexWrap: 'wrap',
                           gap: '1rem', 
                           background: 'rgba(0,0,0,0.2)', 
                           padding: '1rem', 
@@ -382,9 +383,9 @@ export default function DeviceAccordion() {
                           <div style={{ 
                             color: accentColor, 
                             fontWeight: 800, 
-                            fontSize: '0.85rem', 
-                            whiteSpace: 'nowrap',
-                            marginTop: '2px' 
+                            fontSize: '0.9rem', 
+                            marginTop: '2px',
+                            flexShrink: 0
                           }}>
                             {step.name}
                           </div>
