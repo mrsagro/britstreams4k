@@ -54,9 +54,6 @@ export default function Hero() {
         
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           
-          <div style={{ color: 'red', fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem', background: 'white', padding: '10px', borderRadius: '10px', display: 'inline-block' }}>
-            Aslam Testing Vercel Update
-          </div>
           <h1 style={{ 
             fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
             fontWeight: 900,
