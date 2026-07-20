@@ -1,136 +1,105 @@
-import { Zap, Tv, Video, Smartphone, Clapperboard, Headset, ArrowRight } from "lucide-react";
-import Link from "next/link";
+"use client";
+
+import { Zap, ShieldCheck, Tv, MonitorSmartphone, LayoutGrid, ServerCrash } from "lucide-react";
 
 export default function Features() {
   const features = [
     {
-      title: "Anti-Freeze 3.0",
-      description: "Zero buffering during peak UK sports events.",
-      icon: <Zap size={32} color="#00d4ff" strokeWidth={1.2} />,
-      glowColor: "#00d4ff"
+      icon: <Zap size={32} />,
+      title: "Ultra Fast & Stable UK Servers",
+      desc: "Built on UK-routed infrastructure for fast IPTV UK streaming. Stable connections mean your channel switches instantly.",
+      color: "var(--primary)",
+      bg: "rgba(0, 68, 255, 0.1)"
     },
     {
-      title: "20,000+ Channels",
-      description: "UK & International premium networks in HD/4K.",
-      icon: <Tv size={32} color="#10b981" strokeWidth={1.2} />,
-      glowColor: "#10b981"
+      icon: <ShieldCheck size={32} />,
+      title: "Fully Legal UK IPTV Streaming",
+      desc: "Britstreams4K only distributes properly licensed content. Legal IPTV UK you can trust, with no grey areas and no risk to your account.",
+      color: "var(--success)",
+      bg: "rgba(16, 185, 129, 0.1)"
     },
     {
-      title: "True 4K UHD",
-      description: "Crystal clear picture quality tailored to your speed.",
-      icon: <Video size={32} color="#f59e0b" strokeWidth={1.2} />,
-      glowColor: "#f59e0b"
+      icon: <Tv size={32} />,
+      title: "True 4K & UHD Picture Quality",
+      desc: "Watch in crisp HD, 4K, or UHD IPTV UK quality on every supported channel.",
+      color: "#ff9900",
+      bg: "rgba(255, 153, 0, 0.1)"
     },
     {
-      title: "All Devices",
-      description: "Firestick, Smart TV, Android, Apple TV & more.",
-      icon: <Smartphone size={32} color="#8b5cf6" strokeWidth={1.2} />,
-      glowColor: "#8b5cf6"
+      icon: <MonitorSmartphone size={32} />,
+      title: "All Devices Compatibility",
+      desc: "Firestick, Smart TV, Android, iOS, or PC, Britstreams4K works on every device. One subscription, no extra hardware needed.",
+      color: "#ec4899",
+      bg: "rgba(236, 72, 153, 0.1)"
     },
     {
-      title: "VOD Library",
-      description: "50,000+ Movies and TV Series updated weekly.",
-      icon: <Clapperboard size={32} color="#ec4899" strokeWidth={1.2} />,
-      glowColor: "#ec4899"
+      icon: <LayoutGrid size={32} />,
+      title: "Thousands of Premium Live Channels",
+      desc: "Access thousands of live IPTV channels UK-wide. Sports, movies, news, web series, kids' content, and more are included.",
+      color: "#8b5cf6",
+      bg: "rgba(139, 92, 246, 0.1)"
     },
     {
-      title: "24/7 UK Support",
-      description: "Instant help via WhatsApp from our UK team.",
-      icon: <Headset size={32} color="#06b6d4" strokeWidth={1.2} />,
-      glowColor: "#06b6d4"
+      icon: <ServerCrash size={32} />,
+      title: "Zero Buffering, Even at Peak Times",
+      desc: "Our servers are built for peak-hour demand across the UK. IPTV no buffering is the standard here, not the exception.",
+      color: "var(--accent)",
+      bg: "rgba(255, 17, 0, 0.1)"
     }
   ];
 
   return (
     <section id="features" className="section" style={{ background: '#050505', position: 'relative' }}>
       
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 className="heading-lg" style={{ marginBottom: '1rem', fontSize: '2.5rem' }}>Everything You <span style={{ color: 'var(--primary)' }}>Need</span></h2>
-          <p className="text-muted" style={{ fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
-            A fast, reliable, and premium streaming experience without the heavy price tag.
+      <div className="container">
+        <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
+          <h2 className="heading-lg" style={{ marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+            WHY THOUSANDS OF CUSTOMERS TRUST <span style={{ color: 'var(--primary)' }}>BRITSTREAMS4K</span>
+          </h2>
+          <p className="text-muted" style={{ fontSize: '1.25rem' }}>
+            Everything a UK IPTV subscription should be, in one service.
           </p>
         </div>
 
-        {/* Premium 6-Card Grid */}
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', 
-          gap: '1.5rem',
-          marginBottom: '4rem'
-        }}>
+        <div className="responsive-grid">
           {features.map((feature, index) => (
-            <div key={index} className="hover-card" style={{ 
-              background: 'linear-gradient(180deg, rgba(30,30,30,0.5) 0%, rgba(15,15,15,0.8) 100%)',
-              border: '1px solid rgba(255,255,255,0.05)',
+            <div key={index} className="glass" style={{ 
+              padding: '2.5rem 2rem', 
               borderRadius: '1.5rem',
-              padding: '2rem',
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '1.5rem',
-              cursor: 'default',
-              position: 'relative',
-              overflow: 'hidden'
-            }}>
-              {/* Background ambient glow for icon */}
-              <div style={{
-                position: 'absolute',
-                top: '2rem',
-                left: '2rem',
-                width: '64px',
-                height: '64px',
-                background: feature.glowColor,
-                filter: 'blur(35px)',
-                opacity: 0.15,
-                zIndex: 0,
-                transition: 'opacity 0.3s ease'
-              }}></div>
-
-              {/* Icon Container */}
+              borderTop: `3px solid ${feature.color}`,
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = `0 15px 30px ${feature.bg}`;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+            >
               <div style={{ 
-                position: 'relative',
-                zIndex: 1,
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                width: '64px',
-                height: '64px',
-                minWidth: '64px',
-                borderRadius: '1.25rem',
-                display: 'flex',
-                alignItems: 'center',
+                background: feature.bg, 
+                width: '64px', 
+                height: '64px', 
+                borderRadius: '1rem', 
+                display: 'flex', 
+                alignItems: 'center', 
                 justifyContent: 'center',
-                boxShadow: `inset 0 0 20px ${feature.glowColor}10`
+                color: feature.color,
+                marginBottom: '1.5rem'
               }}>
                 {feature.icon}
               </div>
-              
-              <div style={{ position: 'relative', zIndex: 1, paddingTop: '0.25rem' }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>{feature.title}</h3>
-                <p style={{ color: '#a1a1aa', fontSize: '0.95rem', lineHeight: 1.6 }}>{feature.description}</p>
-              </div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '1rem', color: '#fff' }}>
+                {feature.title}
+              </h3>
+              <p style={{ color: '#a1a1aa', lineHeight: 1.6 }}>
+                {feature.desc}
+              </p>
             </div>
           ))}
         </div>
-
-        {/* View All Features Button */}
-        <div style={{ textAlign: 'center' }}>
-          <Link href="/features" className="btn btn-primary hover-glow" style={{ 
-            display: 'inline-flex', 
-            alignItems: 'center', 
-            gap: '0.5rem', 
-            padding: '1rem 2rem', 
-            fontSize: '1rem',
-            background: 'transparent',
-            border: '1px solid var(--primary)',
-            color: '#fff',
-            boxShadow: 'none'
-          }}>
-            Explore Detailed Tech Specs
-            <ArrowRight size={18} />
-          </Link>
-        </div>
-
       </div>
     </section>
   );

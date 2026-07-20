@@ -46,8 +46,8 @@ export default function Channels() {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 className="heading-lg" style={{ marginBottom: '1.5rem', fontSize: '3.5rem', letterSpacing: '-1px' }}>
-            Ultimate <span style={{ color: activeCategory.color, transition: 'color 0.3s ease' }}>Channel Lineup</span>
+          <h2 className="heading-lg" style={{ marginBottom: '1rem', textTransform: 'uppercase' }}>
+            Ultimate IPTV Channels <span style={{ color: 'var(--primary)' }}>Lineup</span>
           </h2>
           <p className="text-muted" style={{ fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.8 }}>
             Ditch the boring lists. Experience 20,000+ premium networks in glorious 4K/HD. Switch categories to explore our massive library.

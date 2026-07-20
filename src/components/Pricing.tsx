@@ -54,9 +54,11 @@ export default function Pricing() {
       <div className="container">
         
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 className="heading-lg" style={{ marginBottom: '1rem' }}>Simple, <span style={{ color: 'var(--primary)' }}>Transparent Pricing</span></h2>
+          <h2 className="heading-lg" style={{ marginBottom: '1rem', textTransform: 'uppercase' }}>
+            IPTV Subscription <span style={{ color: 'var(--primary)' }}>Plans</span>
+          </h2>
           <p className="text-muted" style={{ fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
-            No hidden fees, no contracts. Choose the plan that fits you best and start watching immediately.
+            Choose an IPTV Subscription Plan According to Your Requirements & Needs
           </p>
         </div>
 

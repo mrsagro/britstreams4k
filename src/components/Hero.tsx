@@ -1,13 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import ChannelSearch from "./ChannelSearch";
-import { Star, ShieldCheck } from "lucide-react";
-
 import Image from "next/image";
+import { siteConfig } from "../config";
 
 export default function Hero() {
+  const whatsappNumber = siteConfig.contact.whatsappNumber;
 
   return (
     <section style={{
@@ -17,6 +15,7 @@ export default function Hero() {
       alignItems: 'center',
       justifyContent: 'center',
       paddingTop: '8rem',
+      paddingBottom: '4rem',
       overflow: 'hidden',
       zIndex: 1
     }}>
@@ -47,81 +46,87 @@ export default function Hero() {
         left: 0,
         right: 0,
         bottom: 0,
-        background: 'linear-gradient(to bottom, rgba(5,5,5,0.6) 0%, rgba(5,5,5,0.3) 50%, rgba(5,5,5,1) 100%)',
+        background: 'linear-gradient(to bottom, rgba(2,2,2,0.7) 0%, rgba(2,2,2,0.4) 50%, rgba(2,2,2,1) 100%)',
         zIndex: -1
       }}></div>
 
-      <div className="container" style={{ position: 'relative', zIndex: 10, display: 'grid', gridTemplateColumns: '1fr', gap: '4rem', alignItems: 'center' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         
-        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           
-
-
-          <h1 className="heading-xl" style={{ marginBottom: '1.5rem' }}>
-            The Ultimate UK <br />
-            <span style={{ 
-              color: 'var(--primary)', 
-              WebkitTextFillColor: 'var(--primary)',
-              WebkitTextStroke: '1px #FFD700',
-              textShadow: '0 2px 10px rgba(0,0,0,0.8)'
-            }}>Streaming Experience.</span>
+          <h1 style={{ 
+            fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+            fontWeight: 900,
+            lineHeight: 1.15,
+            letterSpacing: '-0.02em',
+            color: '#ffffff',
+            marginBottom: '1.5rem',
+            textShadow: '0 4px 30px rgba(0,0,0,1), 0 2px 10px rgba(0,0,0,0.8)'
+          }}>
+            Best IPTV Provider UK 2026 | Buy IPTV Subscription UK & Get <span style={{ color: 'var(--primary)' }}>Premium IPTV Streaming UK</span>
           </h1>
           
-          <p className="heading-md" style={{ 
-            color: '#ffffff', 
-            textShadow: '0 2px 15px rgba(0,0,0,0.9), 0 2px 5px rgba(0,0,0,0.8)',
+          <p className="text-muted" style={{ 
             fontSize: '1.25rem', 
-            fontWeight: 500,
             marginBottom: '2.5rem', 
-            maxWidth: '600px', 
+            maxWidth: '750px', 
             margin: '0 auto 2.5rem auto', 
-            lineHeight: 1.6 
+            lineHeight: 1.8,
+            color: '#e4e4e7',
+            textShadow: '0 2px 10px rgba(0,0,0,0.8)'
           }}>
-            Access exclusive content from the UK, US, and worldwide in stunning 4K UHD. 
-            <span style={{ color: '#fff', fontWeight: 700 }}> No freezing, no buffering. Just premium entertainment.</span>
+            Premium IPTV UK service providers at cheap prices. Get IPTV for Firestick, Smart TV, Android TV, iPads/iPhones, Mac, & Windows with a free setup guide. Watch 10,000+ IPTV Channels UK in 4k.
           </p>
           
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="#pricing" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
-              View UK Plans
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '4rem' }}>
+            <a 
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi, I want to start my 24h Free Trial")}`}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary" 
+              style={{ padding: '1rem 2rem', fontSize: '1.125rem', background: '#25D366', color: '#fff', boxShadow: '0 4px 15px rgba(37,211,102,0.3)' }}
+            >
+              Start 24h Free Trial
+            </a>
+            <Link href="/iptv-installation-plans" className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.125rem', background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)' }}>
+              View Subscription Plans
             </Link>
-            <div style={{ minWidth: '250px', width: '100%', maxWidth: '500px', marginTop: '1rem' }}>
-              <ChannelSearch />
-            </div>
           </div>
 
-          {/* Trust Badges */}
-          <div style={{ marginTop: '3rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+          {/* Stats Grid */}
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
+            gap: '1rem',
+            background: 'rgba(255,255,255,0.03)',
+            border: '1px solid rgba(255,255,255,0.05)',
+            backdropFilter: 'blur(12px)',
+            borderRadius: '1.5rem',
+            padding: '2rem'
+          }}>
             
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(20,20,20,0.6)', padding: '0.75rem 1.5rem', borderRadius: '1rem', border: '1px solid var(--glass-border)' }}>
-              <div style={{ display: 'flex', gap: '2px' }}>
-                {[1, 2, 3, 4, 5].map(i => <Star key={i} size={20} fill="#10b981" color="#10b981" />)}
-              </div>
-              <div style={{ width: '1px', height: '24px', background: 'var(--glass-border)' }}></div>
-              <span style={{ fontSize: '0.875rem', fontWeight: 600, color: '#fff' }}>Trustpilot <span style={{ color: 'var(--muted)', fontWeight: 400 }}>4.9/5 Excellent</span></span>
-              
-              <div style={{ width: '1px', height: '24px', background: 'var(--glass-border)', marginLeft: '0.5rem', marginRight: '0.5rem' }} className="hide-on-mobile"></div>
-              
-              <div className="hide-on-mobile" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <ShieldCheck size={20} color="var(--primary)" />
-                <span style={{ fontSize: '0.875rem', fontWeight: 500, color: '#fff' }}>Verified Secure</span>
-              </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
+              <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary)' }}>10,000+</div>
+              <div style={{ fontSize: '0.9rem', color: '#a1a1aa', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Live channels</div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span style={{ color: 'var(--success)' }}>✓</span>
-                <span style={{ fontSize: '0.875rem', color: 'var(--foreground)' }}>4K UHD & HDR10+</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span style={{ color: 'var(--success)' }}>✓</span>
-                <span style={{ fontSize: '0.875rem', color: 'var(--foreground)' }}>99.9% Uptime</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span style={{ color: 'var(--success)' }}>✓</span>
-                <span style={{ fontSize: '0.875rem', color: 'var(--foreground)' }}>Anti-Freeze 3.0</span>
-              </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
+              <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--success)' }}>99.9%</div>
+              <div style={{ fontSize: '0.9rem', color: '#a1a1aa', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Server uptime</div>
             </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
+              <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>4K / UHD</div>
+              <div style={{ fontSize: '0.9rem', color: '#a1a1aa', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Stream quality</div>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
+              <div style={{ fontSize: '2rem', fontWeight: 800, color: '#ff9900' }}>24/7</div>
+              <div style={{ fontSize: '0.9rem', color: '#a1a1aa', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>UK support</div>
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>

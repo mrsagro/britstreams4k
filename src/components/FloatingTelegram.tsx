@@ -8,7 +8,8 @@ export default function FloatingTelegram() {
   const telegramHandle = "Iptvuk10";
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClick = () => {

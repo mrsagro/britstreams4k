@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.britstreams4k.uk"),
-  title: "BritStreams 4K | Best Premium UK IPTV Subscription Service 2026",
-  description: "Experience the Ultimate UK Streaming with BritStreams 4K. Anti-freeze 3.0 technology, 20,000+ channels in HD/4K, and 50,000+ VODs. Compatible with all devices.",
+  title: "Best IPTV Provider UK 2026 | Buy IPTV Subscription UK 30% OFF",
+  description: "Best Premium UK IPTV Subscription Service Provider 2026. Get IPTV for Firestick, Smart TV, Android TV, iPads/iPhones, Mac, & Windows with a free setup guide.",
   keywords: "IPTV UK, Premium IPTV, 4K IPTV subscription, BritStreams 4K, Firestick IPTV, UK Sports IPTV",
   alternates: {
     canonical: "/",

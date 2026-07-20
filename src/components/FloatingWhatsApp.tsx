@@ -10,7 +10,8 @@ export default function FloatingWhatsApp() {
   const whatsappNumber = siteConfig.contact.whatsappNumber; // The user's provided number
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClick = () => {

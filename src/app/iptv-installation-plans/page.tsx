@@ -1,63 +1,43 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Pricing from "@/components/Pricing";
+import type { Metadata } from "next";
+import UrgencyBanner from "../../components/UrgencyBanner";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-export const metadata = {
-  title: "IPTV Installation Plans | BritStream 4K IPTV",
-  description: "View our flexible IPTV subscription plans. Choose from 1 month, 3 months, 6 months, or 12 months with full 4K and Anti-Freeze support.",
+// Page Components
+import PlansHero from "../../components/PlansHero";
+import Pricing from "../../components/Pricing";
+import PlanFeatures from "../../components/PlanFeatures";
+import WhyChoosePlans from "../../components/WhyChoosePlans";
+import PlanComparisonTable from "../../components/PlanComparisonTable";
+import Devices from "../../components/Devices";
+import PlanSetupSteps from "../../components/PlanSetupSteps";
+import PlansFinalCTA from "../../components/PlansFinalCTA";
+
+export const metadata: Metadata = {
+  title: "IPTV Subscription Plans | Cheap Best IPTV Subscription 2026",
+  description: "Get the discounted IPTV Subscription Plans 2026. Best 4k IPTV Subscription at cheap rates. Buy a USA or UK IPTV Subscription. Starting from just £12.99",
+  alternates: {
+    canonical: "/iptv-installation-plans",
+  },
 };
 
 export default function PlansPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "IPTV Installation Plans",
-    "description": "Flexible UK IPTV subscription plans for Firestick, Android, and Smart TVs.",
-    "url": "https://www.britstreams4k.uk/iptv-installation-plans",
-    "mainEntity": {
-      "@type": "OfferCatalog",
-      "name": "IPTV Subscriptions",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "1 Month",
-          "price": "12.99",
-          "priceCurrency": "GBP"
-        },
-        {
-          "@type": "Offer",
-          "name": "12 Months",
-          "price": "84.99",
-          "priceCurrency": "GBP"
-        }
-      ]
-    }
-  };
-
   return (
-    <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Header />
+    <main>
+      <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 }}>
+        <UrgencyBanner />
+        <Header />
+      </div>
       
-      <section className="section" style={{ background: '#020202', paddingTop: '10rem', flexGrow: 1 }}>
-        <div className="container">
-          
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            {/* The SEO requested H1 tag */}
-            <h1 className="heading-xl" style={{ fontSize: '3rem', color: '#fff' }}>IPTV Installation Plans</h1>
-            <p className="text-muted" style={{ fontSize: '1.15rem', maxWidth: '600px', margin: '1rem auto' }}>
-              Our complete pricing structure. No hidden fees, instant activation.
-            </p>
-          </div>
-
-          <Pricing />
-
-        </div>
-      </section>
-
+      <PlansHero />
+      <Pricing />
+      <PlanFeatures />
+      <WhyChoosePlans />
+      <PlanComparisonTable />
+      <Devices />
+      <PlanSetupSteps />
+      <PlansFinalCTA />
+      
       <Footer />
     </main>
   );

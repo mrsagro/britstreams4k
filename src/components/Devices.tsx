@@ -1,131 +1,63 @@
-import { Tv, Monitor, Smartphone, Laptop, Box } from "lucide-react";
+"use client";
+
+import Link from "next/link";
 
 export default function Devices() {
-  const devices = [
-    { name: "Amazon Firestick", desc: "The ultimate IPTV experience", icon: <Tv size={48} strokeWidth={1.5} />, color: "#f97316", glow: "rgba(249, 115, 22, 0.5)" },
-    { name: "Smart TVs", desc: "Samsung Tizen & LG WebOS", icon: <Monitor size={48} strokeWidth={1.5} />, color: "#3b82f6", glow: "rgba(59, 130, 246, 0.5)" },
-    { name: "Android Boxes", desc: "Nvidia Shield, Formuler", icon: <Box size={48} strokeWidth={1.5} />, color: "#10b981", glow: "rgba(16, 185, 129, 0.5)" },
-    { name: "Apple TV", desc: "Seamless 4K on tvOS", icon: <Box size={48} strokeWidth={1.5} />, color: "#e4e4e7", glow: "rgba(228, 228, 231, 0.5)" },
-    { name: "Mobile Devices", desc: "iOS & Android Phones", icon: <Smartphone size={48} strokeWidth={1.5} />, color: "#ec4899", glow: "rgba(236, 72, 153, 0.5)" },
-    { name: "Computers", desc: "Windows PC & Mac OS", icon: <Laptop size={48} strokeWidth={1.5} />, color: "#06b6d4", glow: "rgba(6, 182, 212, 0.5)" },
+  const deviceList = [
+    { name: "Firestick / Fire TV", desc: "Amazon Firestick, Fire TV Stick 4K, Fire TV Cube" },
+    { name: "Android Devices", desc: "Samsung Galaxy, OnePlus, Xiaomi, Oppo, and Huawei" },
+    { name: "Android Box", desc: "Nvidia Shield, Xiaomi Mi Box, H96 Max, and X96 Mini" },
+    { name: "Smart TV", desc: "Samsung, LG, Sony, Hisense, Philips, and TCL" },
+    { name: "Roku Devices", desc: "Roku Express, Roku Streaming Stick, Roku Ultra, and Roku TV" },
+    { name: "iPhone / iOS Devices", desc: "iPhone, iPad, iPod Touch, Apple TV" },
+    { name: "macOS / Windows", desc: "MacBook, iMac, Windows 10, Windows 11, Surface Pro" },
+    { name: "STB / MAG Box", desc: "MAG 322, MAG 420, MAG 524, Formuler Z8, Formuler Z10" },
+    { name: "Enigma2", desc: "Dreambox, Vu+ Duo, Zgemma, Octagon, Gigablue" }
   ];
 
   return (
-    <section id="devices" className="section" style={{ background: '#020202', position: 'relative', overflow: 'hidden' }}>
-      
-      {/* Abstract Background Grid */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
-        backgroundSize: '40px 40px',
-        zIndex: 0,
-        opacity: 0.5,
-        pointerEvents: 'none',
-        maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-        WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
-      }}></div>
-
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+    <section id="devices" className="section" style={{ background: '#050505' }}>
+      <div className="container">
         
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <div style={{ 
-            display: 'inline-block', 
-            padding: '0.5rem 1rem', 
-            background: 'rgba(255,255,255,0.05)', 
-            border: '1px solid rgba(255,255,255,0.1)', 
-            borderRadius: '999px',
-            marginBottom: '1.5rem',
-            color: '#a1a1aa',
-            fontSize: '0.85rem',
-            fontWeight: 600,
-            letterSpacing: '1px',
-            textTransform: 'uppercase'
-          }}>
-            Multi-Platform Support
-          </div>
-          <h2 className="heading-lg" style={{ marginBottom: '1.5rem', fontSize: '3rem' }}>
-            Compatible with <span style={{ color: 'var(--primary)', textShadow: '0 0 30px rgba(0,68,255,0.5)' }}>All Devices</span>
+        <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
+          <h2 className="heading-lg" style={{ marginBottom: '1rem', textTransform: 'uppercase' }}>
+            IPTV COMPATIBLE <span style={{ color: 'var(--primary)' }}>DEVICES</span>
           </h2>
-          <p className="text-muted" style={{ fontSize: '1.15rem', maxWidth: '650px', margin: '0 auto', lineHeight: 1.8 }}>
-            Whether you are at home on your big screen or traveling with your phone, BritStream 4K works flawlessly on any device.
+          <p className="text-muted" style={{ fontSize: '1.15rem', lineHeight: 1.8 }}>
+            Get a free IPTV Installation Guide for all the devices. You can easily set up IPTV on any compatible device in under 3 to 5 minutes.
           </p>
         </div>
 
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', 
-          gap: '2rem' 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', 
+          gap: '1.5rem',
+          marginBottom: '4rem'
         }}>
-          {devices.map((device, index) => (
-            <div key={index} className="animate-fade-in hover-card" style={{
-              background: 'linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.95) 100%)',
-              border: '1px solid rgba(255,255,255,0.03)',
-              borderRadius: '1.5rem',
-              padding: '2.5rem 2rem',
+          {deviceList.map((device, index) => (
+            <div key={index} style={{
+              background: 'rgba(255,255,255,0.02)',
+              border: '1px solid rgba(255,255,255,0.05)',
+              padding: '1.5rem',
+              borderRadius: '1rem',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
-              textAlign: 'center',
-              position: 'relative',
-              overflow: 'hidden',
-              backdropFilter: 'blur(10px)'
-            }}>
-              {/* Background ambient glow matching device color */}
-              <div style={{
-                position: 'absolute',
-                top: '-20%',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '100px',
-                height: '100px',
-                background: device.color,
-                filter: 'blur(50px)',
-                opacity: 0.15,
-                zIndex: 0,
-                pointerEvents: 'none'
-              }}></div>
-
-              {/* Watermark Icon */}
-              <div style={{
-                position: 'absolute',
-                bottom: '-10%',
-                right: '-10%',
-                color: device.color,
-                opacity: 0.03,
-                transform: 'scale(3) rotate(-10deg)',
-                zIndex: 0,
-                pointerEvents: 'none'
-              }}>
-                {device.icon}
-              </div>
-
-              {/* Foreground Icon */}
-              <div className="device-icon" style={{ 
-                color: '#fff', 
-                marginBottom: '1.5rem', 
-                position: 'relative', 
-                zIndex: 1,
-                transition: 'all 0.4s ease' 
-              }}>
-                {device.icon}
-              </div>
-              
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem', color: '#fff' }}>{device.name}</h3>
-                <p style={{ color: '#a1a1aa', fontSize: '0.95rem', lineHeight: 1.5 }}>{device.desc}</p>
-              </div>
+              gap: '0.5rem',
+              transition: 'background 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.02)'}
+            >
+              <h3 style={{ color: '#fff', fontSize: '1.125rem', fontWeight: 700 }}>{device.name}</h3>
+              <p style={{ color: '#a1a1aa', fontSize: '0.9rem', lineHeight: 1.5 }}>{device.desc}</p>
             </div>
           ))}
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-          <p className="text-muted" style={{ fontSize: '1rem', letterSpacing: '0.5px' }}>
-            We provide setup guides for all devices immediately after purchase.
-          </p>
+        <div style={{ textAlign: 'center' }}>
+          <Link href="/iptv-installation-guide" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+            Free Installation Guide
+          </Link>
         </div>
 
       </div>
