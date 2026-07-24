@@ -259,3 +259,24 @@ p {
   scrollbar-width: none;
 }
 
+/* Blog Content Markdown Styling */
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+.blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5, .blog-content h6 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+.blog-content ul, .blog-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+.blog-content a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
